@@ -8,7 +8,6 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -22,7 +21,6 @@ main {
 
 .top-section {
     width: 870px;
-    height: 679px;
     background: #FFFFFF;
     border-radius: 5px;
     top: 100px;
@@ -40,7 +38,6 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px;
-    grid-column-gap: 45px;
 }
 
 .players img {
@@ -98,20 +95,20 @@ hr {
 
 .bottom-section {
     width: 870px;
-    height: 400px;
     background: #FFFFFF;
     border-radius: 5px;
     padding: 33px;
     margin: 10px;
 }
 
-.course img {
+.courses img {
     height: 104px;
 }
 
 .course {
     display: flex;
     flex-direction: column;
+    align-items: center;
     box-shadow: 5px 5px 10px lightgrey;
     padding: 17px;
     border-radius: 10px;
@@ -135,6 +132,11 @@ hr {
     color: #AEAEAE;
 }
 
+.course-detail {
+    display: flex;
+    flex-direction: column;
+}
+
 .course-info {
     display: flex;
     justify-content: space-between;
@@ -154,4 +156,71 @@ hr {
 
 .clock {
     height: 5px;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width:688px) {
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .top-section,
+    .bottom-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-players,
+    .top-blogs,
+    .top-courses {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .course-detail {
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:688px)and (max-width:992px) {
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .top-section,
+    .bottom-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-players,
+    .top-blogs,
+    .top-courses {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course-detail {
+        align-items: center;
+    }
 }
